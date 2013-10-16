@@ -1,0 +1,24 @@
+{
+  "name": "usergen",
+  "version": "1.0.0",
+  "description": "A simple means to generate user data.",
+  "main": "usergen.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Schoonology/usergen.git"
+  },
+  "keywords": [
+    "random",
+    "user",
+    "test",
+    "testing",
+    "data"
+  ],
+  "author": "Michael Schoonmaker <michael.r.schoonmaker@gmail.com>",
+  "license": "MIT"
+}
