@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A simple means to generate user data.",
   "main": "usergen.js",
-  "dependencies": {},
+  "dependencies": {
+    "weighted": "~0.2.2"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
