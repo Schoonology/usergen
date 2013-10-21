@@ -6,13 +6,60 @@ as username generation.
 
 ## Installation
 
+If you're using it for testing (usual case):
+
 ```sh
 npm install usergen --save-dev
 ```
 
+Otherwise:
+
+```sh
+npm install usergen --save
+```
+
 ## Usage Example
 
+Generating an entire user (to save to Mongoose, in this case):
+
 ```js
+// Require the module.
+var usergen = require('usergen');
+
+// Generate user data.
+var user = usergen.user();
+
+// Example use case: saving this user to Mongoose.
+SomeAwesomeModel.create(user);
+```
+
+Generating a username with custom data:
+
+```js
+var usergen = require('usergen');
+var data = {
+  Adj: [
+    'Super',
+    'Awesome'
+  ],
+  Verb: [
+    'Jump',
+    'Fly'
+  ],
+  Noun: [
+    'Wizard',
+    'Robot',
+    'Zombie',
+    'Ninja'
+  ],
+  pattern: {
+    AdjNoun: 0.75,
+    VerbingNoun: 0.25
+  }
+};
+
+// Prints out the new username, rendered using `data`.
+console.log(usergen.render(data));
 ```
 
 ## Alternatives
