@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A simple means to generate user data.",
   "main": "usergen.js",
+  "bin": {
+    "usergen": "bin/usergen"
+  },
   "dependencies": {
     "weighted": "~0.2.2"
   },
