@@ -18,14 +18,21 @@ function user(data) {
     data = usergen.data.default
   }
 
-  return {
-    name: {
-      first: selectOrRender(data.first),
-      last: selectOrRender(data.last)
-    },
-    email: selectOrRender(data.email),
-    username: selectOrRender(data.username)
-  }
+  return Object.keys(data)
+    .reduce(function (obj, key) {
+      var target = obj
+      var subkeys = key.split('.')
+
+      subkeys
+        .slice(0, -1)
+        .map(function (subkey) {
+          target = obj[subkey] || (obj[subkey] = {})
+          return subkey
+        })
+
+      target[subkeys.pop()] = selectOrRender(data[key])
+      return obj
+    }, {})
 }
 
 /**

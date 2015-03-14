@@ -1,5 +1,5 @@
 {
-  "first": [
+  "name.first": [
     "Robert",
     "Allison",
     "Cassie",
@@ -21,7 +21,7 @@
     "Stephanie",
     "William"
   ],
-  "last": [
+  "name.last": [
     "Thompson",
     "Smith",
     "Myers",
