@@ -157,5 +157,12 @@
       "NounOfTheNouns": 0.125,
       "xAdjNounx": 0.025
     }
-  }
+  },
+  "password": [
+    "password",
+    "123456",
+    "qwerty",
+    "zxcvbn",
+    "!qaz@wsx"
+  ]
 }
