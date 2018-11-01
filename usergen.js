@@ -43,6 +43,10 @@ function user(data) {
  */
 usergen.render = selectOrRender
 function selectOrRender(data) {
+  if (typeof data !== 'object') {
+    return data
+  }
+
   if (!data.pattern) {
     return select(data)
   }
